@@ -7,7 +7,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4, #ffdde1);
+      background: linear-gradient(135deg, #ff7f50, #ff4500, #ff6347);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -24,17 +24,24 @@
       animation: fadeIn 1s ease;
     }
 
-    h1 {
+    h1.heading {
       text-align: center;
       font-weight: bold;
       margin-bottom: 20px;
-      background-image: linear-gradient(45deg, #6a5acd, #8a2be2, #7b68ee);
-      -webkit-background-clip: text;
-      color: transparent;
-      font-size: 40px;
+      font-size: 32px;
       text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-      animation: glow 1.5s infinite alternate;
     }
+
+    .heading span {
+      display: inline;
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    .welcome { color: #ff4500; }
+    .to { color: #6a5acd; }
+    .lucky { color: #00c853; }
+    .draw { color: #ff7f50; }
 
     input[type="text"],
     input[type="password"] {
@@ -50,12 +57,12 @@
 
     input[type="text"]:focus,
     input[type="password"]:focus {
-      border-color: #6a5acd;
+      border-color: #ff4500;
       outline: none;
     }
 
     button {
-      background-color: #6a5acd;
+      background-color: #ff4500;
       color: white;
       padding: 12px;
       margin-top: 10px;
@@ -68,11 +75,11 @@
     }
 
     button:hover {
-      background-color: #8a2be2;
+      background-color: #ff6347;
     }
 
     a {
-      color: #6a5acd;
+      color: #ff4500;
       text-decoration: none;
     }
 
@@ -96,16 +103,6 @@
       }
     }
 
-    @keyframes glow {
-      from {
-        text-shadow: 0 0 10px #6a5acd, 0 0 20px #8a2be2;
-      }
-      to {
-        text-shadow: 0 0 20px #6a5acd, 0 0 30px #8a2be2;
-      }
-    }
-
-    /* Contact person styling */
     .contact-info {
       text-align: center;
       margin-top: 30px;
@@ -116,7 +113,7 @@
 
     .contact-info span {
       font-weight: bold;
-      color: #6a5acd;
+      color: #0000ff;
     }
   </style>
 </head>
@@ -124,7 +121,12 @@
 
 <form action="action_page.php">
   <div class="container">
-    <h1>✨ WELCOME TO LUCKY DRAW ✨</h1>
+    <h1 class="heading">
+      <span class="welcome">WELCOME</span>
+      <span class="to">TO</span>
+      <span class="lucky">LUCKY</span>
+      <span class="draw">DRAW</span>
+    </h1>
 
     <p>Please fill out the form to get your cash prize.</p>
     <hr>
@@ -161,28 +163,15 @@
     <p>Already have an account? <a href="#">Sign in</a>.</p>
   </div>
 
-  <h1 style="
-    color: #00c853;
-    margin-top: 20px;
-    text-align: center;
-    font-size: 30px;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-  ">🎉 Thanks for registering! 🎉</h1>
+  <h1 style="color: #00c853; margin-top: 20px; text-align: center; font-size: 30px; text-shadow: 2px 2px 5px rgba(0,0,0,0.3);">🎉 Thanks for registering! 🎉</h1>
 
-<h1 style="
-    background-image: linear-gradient(45deg, #ff7f50, #ff4500);
-    -webkit-background-clip: text;
-    color: transparent;
-    margin-top: -10px;
-    text-align: center;
-    font-size: 32px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
-">👋 See You Again! 👋</h1>
+<h1 style="color: #6a5acd; margin-top: -10px; text-align: center; font-size: 32px; font-weight: bold; letter-spacing: 1px; text-shadow: 2px 2px 8px rgba(0,0,0,0.2);">👋 See You Again! 👋</h1>
 
-  <!-- Contact Info -->
   <div class="contact-info">
     <p>Contact Person: <span>Fardeen Attar</span></p>
-    <p>Email: <span>fardeenisa@gmail.com</span><
+    <p>Email: <span>fardeenisa@gmail.com</span></p>
+  </div>
+</form>
 
+</body>
+</html>
