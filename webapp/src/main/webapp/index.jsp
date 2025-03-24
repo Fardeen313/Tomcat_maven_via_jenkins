@@ -176,7 +176,8 @@
 </body>
 </html>
 -->
-<html lang="en">
+
+<!-- <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -258,6 +259,133 @@
     .signin {
       text-align: center;
       margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <form action="action_page.php">
+    <div class="container">
+      <h1 class="heading">Lucky Draw Registration</h1>
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" name="name" placeholder="Enter Full Name" required>
+        
+        <label for="account">Bank Account No</label>
+        <input type="text" name="account" placeholder="Enter Account Number" required>
+      </div>
+
+      <div class="form-group">
+        <label for="ifsc">IFSC CODE</label>
+        <input type="text" name="ifsc" placeholder="Enter IFSC Code" required>
+        
+        <label for="aadhar">AADHAR No</label>
+        <input type="text" name="aadhar" placeholder="Enter AADHAR Number" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" name="email" placeholder="Enter Email" required>
+        
+        <label for="psw">Password</label>
+        <input type="password" name="psw" placeholder="Enter Password" required>
+      </div>
+
+      <div class="form-group">
+        <label for="psw-repeat">Repeat Password</label>
+        <input type="password" name="psw-repeat" placeholder="Repeat Password" required>
+      </div>
+
+      <button type="submit">Register</button>
+    </div>
+  </form>
+</body>
+</html>
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucky Draw Registration</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      width: 90%;
+      max-width: 900px;
+      animation: fadeIn 1s ease;
+    }
+
+    h1.heading {
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 20px;
+      font-size: 32px;
+      color: #6a11cb;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    }
+
+    .form-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .form-group label {
+      width: 100%;
+      font-weight: bold;
+      margin-top: 10px;
+      color: #2575fc;
+    }
+
+    .form-group input {
+      flex: 1;
+      min-width: 45%;
+      padding: 12px;
+      margin: 8px 0;
+      border: 1px solid #6a11cb;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: border-color 0.3s ease;
+    }
+
+    input:focus {
+      border-color: #ffcc00;
+      outline: none;
+    }
+
+    button {
+      background: linear-gradient(135deg, #ffcc00, #ff6600);
+      color: #ffffff;
+      padding: 12px;
+      margin-top: 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 18px;
+      width: 100%;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: linear-gradient(135deg, #ff6600, #ff3300);
+    }
+
+    .signin {
+      text-align: center;
+      margin-top: 20px;
+      color: #ffffff;
     }
   </style>
 </head>
