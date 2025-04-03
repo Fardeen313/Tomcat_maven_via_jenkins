@@ -1,0 +1,9 @@
+# Build stage: Uses Maven to compile and package the application
+FROM maven:latest AS buildstage
+WORKDIR /app
+COPY . .
+RUN mvn clean package
+
+# Runtime stage: Uses Tomcat to deploy the built application
+FROM tomcat:latest
+COPY --from=buildstage /app/webapp/target/*.war /usr/local/tomcat/webapps/webapp.war
